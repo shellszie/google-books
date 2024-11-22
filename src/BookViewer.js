@@ -7,13 +7,8 @@ const BookViewer = () => {
 	const modalRef = useRef();
 	const [loaded, setLoaded] = useState(false);
 	const [show, setShow] = useState(false);
-//	const handleClose = () => setShow(false);
+	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-
-//	const showModal = () => {
-//        const modal = document.getElementById("my-modal");
-//        modal.style.display = 'block';
-//	}
 
     useEffect(()=> {
 		if (!show) {
@@ -81,7 +76,7 @@ const BookViewer = () => {
 
 
            {/*<Modal show={show} onHide={handleClose}>*/}
-           <Modal ref={modalRef} show={show}>
+           <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
@@ -90,13 +85,9 @@ const BookViewer = () => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                {/*    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                    */}
                 </Modal.Footer>
             </Modal>
 
