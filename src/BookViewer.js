@@ -39,7 +39,6 @@ const BookViewer = () => {
     const divStyle = {
         height: '600px',
         width: '500px'
-// display: 'none'
     };
 
     return (
@@ -49,12 +48,15 @@ const BookViewer = () => {
             </Button>
 
 
-{/*           <Modal show={show} onHide={handleClose}>
+           <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body>
+
                 </Modal.Body>
+
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
@@ -63,10 +65,10 @@ const BookViewer = () => {
                         Save Changes
                     </Button>
                 </Modal.Footer>
-            </Modal>*/}
-
+            </Modal>
 
             <div ref={canvasRef} id="viewerCanvas" style={divStyle}></div>
+
         </>
     )
 
